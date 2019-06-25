@@ -1,0 +1,28 @@
+#!/usr/bin/php
+<?php
+require_once dirname(__FILE__)."/../vendor/autoload.php";
+
+/**
+ * Validate input
+ */
+$valid = true;
+if (isset($argv) && count($argv) !== 2) {
+    $valid = false;
+}
+else {
+    $url = $argv[1];
+    if (!filter_var($url, FILTER_VALIDATE_URL)) {
+        $valid = false;
+    }
+}
+
+if (!$valid) {
+    echo "Bad parameters\n", "Usage: url\n";
+    exit(1);
+}
+
+/**
+ * Execute
+ */
+$app = new StadiumGrabber\Application();
+$app->grab($url);

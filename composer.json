@@ -1,0 +1,23 @@
+{
+    "name": "imelectronick/stadiumgrabber",
+    "description": "Grabs information about goods from category pages",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "imelectronick",
+            "email": "nikita.electronick@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "querypath/querypath": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "StadiumGrabber\\": "app/"
+        }
+    }
+
+}

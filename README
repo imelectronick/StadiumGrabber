@@ -1,0 +1,2 @@
+1. To install this application execute "composer install"
+2. To run execute "bin/run URL"
